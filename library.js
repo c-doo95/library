@@ -94,3 +94,6 @@ const redMars = new Book('Red Mars', 'Kim Stanley Robinson', 1992, 519, true);
 const lEtranger = new Book('The Stranger', 'Albert Camus', 1942, 159, true);
 
 const iJest = new Book('Infinite Jest', "David Foster Wallace", 1996, 1079, true);
+
+addBookToLibrary(redMars);
+populateBookShelf();

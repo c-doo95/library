@@ -1,0 +1,27 @@
+body {
+  background-color: #49435e;
+  padding: 0%;
+  margin: 0%;
+}
+
+.header {
+  background-color: #23174e;
+  display: flex;
+  padding: 1% 5%;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #b1a4e0;
+}
+
+.container {
+  display: grid;
+  margin: 2.5%;
+}
+
+button.addBook {
+  height: 50%;
+  align-self: center;
+  justify-self: end;
+}
