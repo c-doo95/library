@@ -51,7 +51,7 @@ function populateBookShelf() {
     authName.textContent = book.author;
     authInfo.appendChild(authTag);
     authInfo.appendChild(authName);
-    card.appendChild(authInfo);
+    bibInfo.appendChild(authInfo);
 
     const pubInfo = document.createElement('div');
     const pubTag = document.createElement('div');
@@ -62,7 +62,7 @@ function populateBookShelf() {
     pubYear.textContent = book.year;
     pubInfo.appendChild(pubTag);
     pubInfo.appendChild(pubYear);
-    card.appendChild(pubInfo);
+    bibInfo.appendChild(pubInfo);
     
     const pageInfo = document.createElement('div');
     const pageTag = document.createElement('div');
@@ -73,7 +73,7 @@ function populateBookShelf() {
     pageCount.textContent = book.pages;
     pageInfo.appendChild(pageTag);
     pageInfo.appendChild(pageCount);
-    card.appendChild(pageInfo);
+    bibInfo.appendChild(pageInfo);
 
     const readStatus = document.createElement('div');
     const readTag = document.createElement('div');
@@ -83,8 +83,9 @@ function populateBookShelf() {
     readBtn.className = 'readToggle';
     readStatus.appendChild(readTag);
     readStatus.appendChild(readBtn);
-    card.appendChild(readStatus);
+    bibInfo.appendChild(readStatus);
 
+    card.appendChild(bibInfo);
     container.appendChild(card);
   }
 }
