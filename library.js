@@ -21,6 +21,8 @@ function removeBookFromLibrary(book) {
 }
 
 function populateBookShelf() {
+  container.replaceChildren();
+
   for (let i = 0; i < myLibrary.length; i++) {
     let book = myLibrary[i];
 

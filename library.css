@@ -28,6 +28,7 @@ button.addBook {
 
 .container {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin: 2.5%;
   gap: 5%;
 }
@@ -38,7 +39,7 @@ button.addBook {
   flex-direction: column;
   padding: 1%;
   aspect-ratio: 1;
-  width: fit-content;
+/*  width: fit-content; */
   border-radius: 0.6rem;
 }
 
@@ -70,7 +71,8 @@ button.del {
   display: grid;
   grid-template: repeat(4, 1fr) / 1fr 2fr;
   align-items: center;
-  gap: 5% 10%;
+  gap: 5%;
+  margin-top: 1.5rem;
 }
 
 .tag {
