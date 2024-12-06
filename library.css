@@ -15,11 +15,6 @@ h1 {
   color: #b8aaeb;
 }
 
-.container {
-  display: grid;
-  margin: 2.5%;
-}
-
 button.addBook {
   height: 50%;
   align-self: center;
@@ -31,12 +26,20 @@ button.addBook {
   background-color: #b8aaeb;
 }
 
+.container {
+  display: grid;
+  margin: 2.5%;
+  gap: 5%;
+}
+
 .card {
   background-color: #b8aaeb;
   display: flex;
   flex-direction: column;
   padding: 1%;
-  width: 20vw;
+  aspect-ratio: 1;
+  width: fit-content;
+  border-radius: 0.6rem;
 }
 
 div.del {
@@ -65,5 +68,29 @@ button.del {
 .bibInfo {
   font-size: 0.8rem;
   display: grid;
-  grid-template: repeat(4, 1fr / 1fr 1fr);
+  grid-template: repeat(4, 1fr) / 1fr 2fr;
+  align-items: center;
+  gap: 5% 10%;
+}
+
+.tag {
+  justify-self: right;
+}
+
+.readToggle {
+  border: none;
+  width: fit-content;
+  align-content: center;
+  border-radius: 0.4rem;
+  font-weight: 500;
+  color: #e6e2f1;
+  padding: 2% 5%;
+}
+
+#read {
+  background-color: #18582d;
+}
+
+#unread {
+  background-color: #d13c3c;
 }

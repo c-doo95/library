@@ -75,6 +75,30 @@ function populateBookShelf() {
     readTag.textContent = 'Read:';
     const readBtn = document.createElement('button');
     readBtn.className = 'readToggle';
+
+    switch (book.read) {
+      case true:
+        readBtn.id = 'read';
+        readBtn.textContent = 'Read';
+        break;
+      case false:
+        readBtn.id = 'unread';
+        readBtn.textContent = 'Unread';
+    }
+
+    readBtn.addEventListener('click', () => {
+      switch (book.read) {
+        case false:
+          book.read = true;
+          readBtn.id = 'read';
+          readBtn.textContent = 'Read';
+          break;
+        case true:
+          book.read = false;
+          readBtn.id = 'unread';
+          readBtn.textContent = 'Unread';       
+      }
+    });
     bibInfo.appendChild(readTag);
     bibInfo.appendChild(readBtn);
 
