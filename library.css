@@ -62,7 +62,7 @@ button.del {
   border-radius: 0.2rem;
 }
 
-.title {
+div.title {
   font-size: 1.3rem;
   font-weight: 600;
   text-align: center;

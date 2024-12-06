@@ -1,4 +1,14 @@
 const container = document.querySelector('.container');
+const addBtn = document.querySelector('.addBook');
+const dialog = document.querySelector('dialog');
+const form = document.querySelector('form');
+const submitBtn = document.querySelector('.submitBtn');
+const newTitle = '';
+const newAuthor = '';
+const newYear = '';
+const newPages = '';
+const newRead = ''
+
 
 const myLibrary = [];
 
@@ -8,17 +18,18 @@ function Book(title, author, year, pages, read) {
   this.year = year;
   this.pages = pages;
   this.read = read;
-}
+};
 
 function addBookToLibrary(book) {
   myLibrary.push(book)
-}
+  console.log(myLibrary);
+};
 
 function removeBookFromLibrary(book) {
   let index = myLibrary.indexOf(book);
   myLibrary.splice(index, 1);
   console.log(myLibrary);
-}
+};
 
 function populateBookShelf() {
   container.replaceChildren();
@@ -91,7 +102,7 @@ function populateBookShelf() {
       case false:
         readBtn.id = 'unread';
         readBtn.textContent = 'Unread';
-    }
+    };
 
     readBtn.addEventListener('click', () => {
       switch (book.read) {
@@ -104,15 +115,31 @@ function populateBookShelf() {
           book.read = false;
           readBtn.id = 'unread';
           readBtn.textContent = 'Unread';       
-      }
+      };
     });
     bibInfo.appendChild(readTag);
     bibInfo.appendChild(readBtn);
 
     card.appendChild(bibInfo);
     container.appendChild(card);
-  }
-}
+  };
+};
+
+addBtn.addEventListener('click', () => {
+  dialog.showModal();
+});
+
+submitBtn.addEventListener('click', () => {
+  const newTitle = document.querySelector('input.title').value;
+  const newAuthor = document.querySelector('input.author').value;
+  const newYear = document.querySelector('input.year').value;
+  const newPages = document.querySelector('input.pageCount').value;
+  const newRead = Boolean(document.forms.addBook.readStatus.value);
+  let newBook = new Book(newTitle, newAuthor, newYear, newPages, newRead);
+  addBookToLibrary(newBook);
+  populateBookShelf();
+  form.reset();
+});
 
 const redMars = new Book('Red Mars', 'Kim Stanley Robinson', 1992, 519, true);
 
