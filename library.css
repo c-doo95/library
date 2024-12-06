@@ -28,17 +28,18 @@ button.addBook {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, 250px);
   margin: 2.5%;
-  gap: 5%;
+  gap: 2rem
+  ;
 }
 
 .card {
   background-color: #b8aaeb;
   display: flex;
   flex-direction: column;
-  padding: 1%;
-  aspect-ratio: 1;
+  padding: 3%;
+  height: 30vh;
 /*  width: fit-content; */
   border-radius: 0.6rem;
 }
