@@ -34,6 +34,11 @@ function populateBookShelf() {
     const delBtn = document.createElement('button');
     delBtn.className = 'del';
     delBtn.textContent = 'Remove';
+    delBtn.addEventListener('click', () => {
+      removeBookFromLibrary(book);
+      populateBookShelf();
+    });
+
     del.appendChild(delBtn);
     card.appendChild(del);
 
