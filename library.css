@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  color: #b1a4e0;
+  color: #b8aaeb;
 }
 
 .container {
@@ -24,4 +24,46 @@ button.addBook {
   height: 50%;
   align-self: center;
   justify-self: end;
+  border: none;
+  border-radius: 0.35rem;
+  padding: 0.8rem;
+  font-weight: 500;
+  background-color: #b8aaeb;
+}
+
+.card {
+  background-color: #b8aaeb;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  width: 20vw;
+}
+
+div.del {
+  display: flex;
+  flex-direction: row-reverse;
+
+  align-content: center
+}
+
+button.del {
+  font-size: 0.7rem;
+  align-content: center;
+  padding: 1%;
+  color: #e6e2f1;
+  font-weight: 500;
+  background-color: #d13c3c;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.bibInfo {
+  font-size: 0.8rem;
+  display: grid;
+  grid-template: repeat(4, 1fr / 1fr 1fr);
 }

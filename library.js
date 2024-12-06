@@ -28,6 +28,7 @@ function populateBookShelf() {
     card.className = 'card';
 
     const del = document.createElement('div');
+    del.className = 'del';
     const delBtn = document.createElement('button');
     delBtn.className = 'del';
     delBtn.textContent = 'Remove';
@@ -42,48 +43,40 @@ function populateBookShelf() {
     const bibInfo = document.createElement('div');
     bibInfo.className = 'bibInfo';
 
-    const authInfo = document.createElement('div');
     const authTag = document.createElement('div');
-    authTag.className = 'info';
+    authTag.className = 'info tag';
     authTag.textContent = 'Author:';
     const authName = document.createElement('div');
     authName.className = 'info';
     authName.textContent = book.author;
-    authInfo.appendChild(authTag);
-    authInfo.appendChild(authName);
-    bibInfo.appendChild(authInfo);
+    bibInfo.appendChild(authTag);
+    bibInfo.appendChild(authName);
 
-    const pubInfo = document.createElement('div');
     const pubTag = document.createElement('div');
-    pubTag.className = 'info';
+    pubTag.className = 'info tag';
     pubTag.textContent = 'Published:';
     const pubYear = document.createElement('div');
     pubYear.className = 'info';
     pubYear.textContent = book.year;
-    pubInfo.appendChild(pubTag);
-    pubInfo.appendChild(pubYear);
-    bibInfo.appendChild(pubInfo);
-    
-    const pageInfo = document.createElement('div');
+    bibInfo.appendChild(pubTag);
+    bibInfo.appendChild(pubYear);
+
     const pageTag = document.createElement('div');
-    pageTag.className = 'info';
+    pageTag.className = 'info tag';
     pageTag.textContent = 'Pages:';
     const pageCount = document.createElement('div');
     pageCount.className = 'info';
     pageCount.textContent = book.pages;
-    pageInfo.appendChild(pageTag);
-    pageInfo.appendChild(pageCount);
-    bibInfo.appendChild(pageInfo);
+    bibInfo.appendChild(pageTag);
+    bibInfo.appendChild(pageCount);
 
-    const readStatus = document.createElement('div');
     const readTag = document.createElement('div');
-    readTag.className = 'info';
+    readTag.className = 'info tag';
     readTag.textContent = 'Read:';
     const readBtn = document.createElement('button');
     readBtn.className = 'readToggle';
-    readStatus.appendChild(readTag);
-    readStatus.appendChild(readBtn);
-    bibInfo.appendChild(readStatus);
+    bibInfo.appendChild(readTag);
+    bibInfo.appendChild(readBtn);
 
     card.appendChild(bibInfo);
     container.appendChild(card);
@@ -97,4 +90,6 @@ const lEtranger = new Book('The Stranger', 'Albert Camus', 1942, 159, true);
 const iJest = new Book('Infinite Jest', "David Foster Wallace", 1996, 1079, true);
 
 addBookToLibrary(redMars);
+addBookToLibrary(lEtranger);
+
 populateBookShelf();
