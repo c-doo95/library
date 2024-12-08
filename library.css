@@ -103,3 +103,42 @@ div.title {
 #unread {
   background-color: #d13c3c;
 }
+
+dialog[open] {
+  background-color: #b8aaeb;
+  border-radius: 0.8rem;
+  height: 250px;
+  width: 200px;
+}
+
+form {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+#btnRow {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button.cancel {
+  align-content: center;
+  padding: 3%;
+  color: #e6e2f1;
+  font-weight: 500;
+  background-color: #d13c3c;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.submitBtn {
+  align-content: center;
+  padding: 3%;
+  color: #e6e2f1;
+  font-weight: 500;
+  background-color: #23174e;
+  border: none;
+  border-radius: 0.2rem;
+}
