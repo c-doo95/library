@@ -39,7 +39,7 @@ button.addBook {
   display: flex;
   flex-direction: column;
   padding: 3%;
-  height: 30vh;
+  height: 250px;
 /*  width: fit-content; */
   border-radius: 0.6rem;
 }
